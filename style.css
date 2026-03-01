@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    background: black;
+    color: white;
+}
+
+.scene {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(circle, #222, #000);
+}
+
+.scene.active {
+    display: flex;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+button {
+    position: absolute;
+    bottom: 30px;
+    padding: 10px 20px;
+    background: hotpink;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#car {
+    position: absolute;
+    bottom: 150px;
+    width: 100px;
+    height: 50px;
+    background: red;
+    border-radius: 15px;
+}
+
+.cat {
+    font-size: 4rem;
+    animation: bounce 0.6s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-40px);
+    }
+}
+
+.karate {
+    font-size: 4rem;
+    animation: kick 1.2s infinite;
+}
+
+@keyframes kick {
+    0% {
+        transform: rotate(0);
+    }
+
+    40% {
+        transform: rotate(25deg);
+    }
+
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.chef {
+    font-size: 4rem;
+    animation: march 2s infinite alternate;
+}
+
+@keyframes march {
+    from {
+        transform: translateX(-50px);
+    }
+
+    to {
+        transform: translateX(50px);
+    }
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
